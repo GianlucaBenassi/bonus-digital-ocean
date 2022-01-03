@@ -1,34 +1,63 @@
 <template>
-    <header>
-        <div class="container">
+    <header class="position-relative">
+        <div class="container h-100">
 
-            <div class="row main_row">
+            <div class="row h-100">
 
                 <!-- left -->
-                <div class="col-10 col-lg-4">
+                <div class="col-10 col-lg-3 h-100">
                     <!-- logo -->
-                    <a href="#" class="logo">
+                    <a href="#" class="d-flex align-items-center h-100 logo">
                         <img src="../../assets/img/logo.png" alt="Digital Ocean top logo">
                     </a>
                 </div>
 
                 <!-- right -->
-                <div class="col-2 col-lg-8">
+                <div class="col-2 col-lg-9 h-100">
                     <!-- navbar -->
-                    <nav>
+                    <nav class="d-flex d-lg-block justify-content-end align-items-center h-100">
 
                         <!-- nav list -->
-                        <div class="row nav_lists" :class="{close : menuClose}">
-                            <div class="col-12">
-                                bla bla
+                        <div class="row d-lg-flex align-items-center nav_lists" :class="{ms_close : menuClose}">
+
+                            <div class="col-12 col-lg-7">
+                                <ul class="m-lg-0 p-lg-0">
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                        <a href="#">Products<i class="fas fa-chevron-down"></i></a>
+                                    </li>
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                        <a href="#">Customers</a>
+                                    </li>
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                        <a href="#">Community<i class="fas fa-chevron-down"></i></a>
+                                    </li>
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                        <a href="#">Pricing</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="col-12">
-                                bla bla
+
+                            <div class="col-12 col-lg-5 text-lg-end">
+                                <ul class="m-lg-0 p-lg-0">
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                        <a href="#">Docs</a>
+                                    </li>
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                        <a href="#">Support<i class="fas fa-chevron-down"></i></a>
+                                    </li>
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                        <a href="#">Login</a>
+                                    </li>
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                        <button>Sing Up</button>
+                                    </li>
+                                </ul>
                             </div>
+                            
                         </div>
 
                         <!-- nav open menu button -->
-                        <div @click="openMenu()" :class="{close : menuButtonHide}">
+                        <div @click="openMenu()" :class="{ms_close : menuButtonHide}">
                             <i class="fas fa-bars"></i>
                         </div>
 
@@ -77,51 +106,41 @@ export default {
 
 header {
     height: 50px;
-    position: relative;
-    background-color: green;
 
-    .container {
-        height: 100%;
-
-        .main_row {
-            height: 100%;
-
-            & > * {
-                height: 100%;
-            }
-        }
-    }
-
-    .logo {
-        height: 100%;
-        display: flex;
-        align-items: center;
-
-        img {
-            height: 80%;
-        }
+    .logo img {
+        height: 70%;
     }
 
     nav {
-        height: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
 
         .nav_lists {
             position: absolute;
             top: 50px;
             left: 0;
             right: 0;
+            z-index: 9999;
+            
+            li a {
+                color: #000;
+                transition: all .2s;
 
-            background-color: red;
+                .fa-chevron-down {
+                    font-size: .8em;
+                    margin-left: 2px;
+                }
+
+                &:hover {
+                    color: $mainColor;
+                }
+            }
 
             @media screen and (min-width: 992px) {
                 & {
-                    position: relative;
-                    top: 0;
+                    position: inherit;
+                    height: 100%;
                 }
             }
+
         }
 
         .fa-bars {
