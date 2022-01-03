@@ -2,17 +2,36 @@
     <header>
         <div class="container">
 
-            <div class="row">
+            <div class="row main_row">
 
+                <!-- left -->
                 <div class="col-10 col-lg-4">
+                    <!-- logo -->
                     <a href="#" class="logo">
                         <img src="../../assets/img/logo.png" alt="Digital Ocean top logo">
                     </a>
                 </div>
 
+                <!-- right -->
                 <div class="col-2 col-lg-8">
+                    <!-- navbar -->
                     <nav>
-                        <i class="fas fa-bars"></i>
+
+                        <!-- nav list -->
+                        <div class="row nav_lists" :class="{close : menuClose}">
+                            <div class="col-12">
+                                bla bla
+                            </div>
+                            <div class="col-12">
+                                bla bla
+                            </div>
+                        </div>
+
+                        <!-- nav open menu button -->
+                        <div @click="openMenu()" :class="{close : menuButtonHide}">
+                            <i class="fas fa-bars"></i>
+                        </div>
+
                     </nav>
                 </div>
 
@@ -24,7 +43,31 @@
 
 <script>
 export default {
-    name: 'Header'
+    name: 'Header',
+    data() {
+        return {
+            menuClose: false,
+            menuButtonHide: true
+        }
+    },
+    methods: {
+        OnResize() {
+            if (window.innerWidth < 992) {
+                this.menuClose = true;
+                this.menuButtonHide = false;
+            } else {
+                this.menuClose = false;
+                this.menuButtonHide = true;
+            }
+        },
+        openMenu() {
+            this.menuClose = !this.menuClose;
+        }
+    },
+    mounted() {
+        this.OnResize();
+        window.addEventListener('resize', this.OnResize, {passive: true});
+    }
 }
 </script>
 
@@ -34,11 +77,13 @@ export default {
 
 header {
     height: 50px;
+    position: relative;
+    background-color: green;
 
     .container {
         height: 100%;
 
-        .row {
+        .main_row {
             height: 100%;
 
             & > * {
@@ -62,6 +107,22 @@ header {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+
+        .nav_lists {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            right: 0;
+
+            background-color: red;
+
+            @media screen and (min-width: 992px) {
+                & {
+                    position: relative;
+                    top: 0;
+                }
+            }
+        }
 
         .fa-bars {
             color: $mainColor;
