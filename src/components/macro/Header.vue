@@ -20,36 +20,36 @@
                         <!-- nav list -->
                         <div class="row d-lg-flex align-items-center nav_lists" :class="{ms_close : menuClose}">
 
-                            <div class="col-12 col-lg-7">
+                            <div class="col-12 col-lg-6 text-lg-center">
                                 <ul class="m-lg-0 p-lg-0">
-                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-1 mx-xl-2">
                                         <a href="#">Products<i class="fas fa-chevron-down"></i></a>
                                     </li>
-                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-1 mx-xl-2">
                                         <a href="#">Customers</a>
                                     </li>
-                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-1 mx-xl-2">
                                         <a href="#">Community<i class="fas fa-chevron-down"></i></a>
                                     </li>
-                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-1 mx-xl-2">
                                         <a href="#">Pricing</a>
                                     </li>
                                 </ul>
                             </div>
 
-                            <div class="col-12 col-lg-5 text-lg-end">
+                            <div class="col-12 col-lg-6 text-lg-end">
                                 <ul class="m-lg-0 p-lg-0">
-                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-1 mx-xl-2">
                                         <a href="#">Docs</a>
                                     </li>
-                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-1 mx-xl-2">
                                         <a href="#">Support<i class="fas fa-chevron-down"></i></a>
                                     </li>
-                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-1 mx-xl-2">
                                         <a href="#">Login</a>
                                     </li>
-                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-2">
-                                        <button>Sing Up</button>
+                                    <li class="d-lg-inline-block my-2 my-lg-0 mx-lg-1 mx-xl-2">
+                                        <button class="ms_login rounded px-2 py-1">Sing Up</button>
                                     </li>
                                 </ul>
                             </div>
@@ -131,6 +131,18 @@ header {
 
                 &:hover {
                     color: $mainColor;
+                }
+            }
+
+            .ms_login {
+                color: $mainColor;
+                background-color: #fff;
+                border: 1px solid $mainColor;
+                transition: all .3s;
+
+                &:hover {
+                    color: #fff;
+                    background-color: $mainColor;
                 }
             }
 
