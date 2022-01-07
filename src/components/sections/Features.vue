@@ -5,7 +5,7 @@
             
             <h2 class="text-center fw-bold">The features your business needs</h2>
 
-            <div class="row row-cols">
+            <div class="row">
                 
                 <div class="col">
 

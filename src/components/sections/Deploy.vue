@@ -21,30 +21,10 @@
 
                 <!-- description column-->
                 <div class="col-12 col-md-10">
-                    <div class="row">
+                    <div class="row row-cols-1 row-cols-md-2">
 
-                        <div class="col-12 col-md-6">
-                            <img src="../../assets/img/cluster-deploy.svg" alt="Cluster deployments">
-                            <h4 class="fw-bold mt-2">Cluster deployments</h4>
-                            <p>Provision multiple Droplets (virtual machines) in seconds with our control panel, CLI, or directly against our API.</p>
-                        </div>
-
-                        <div class="col-12 col-md-6">
-                            <img src="../../assets/img/optimized-compute.svg" alt="Optimized compute">
-                            <h4 class="fw-bold mt-2">Optimized compute types</h4>
-                            <p>Get the compute resources you need with Standard or Optimized Droplets.</p>
-                        </div>
-
-                        <div class="col-12 col-md-6">
-                            <img src="../../assets/img/one-click.svg" alt="One click apps">
-                            <h4 class="fw-bold mt-2">One-click apps</h4>
-                            <p>Skip the install and configuration process with pre-build open source images supporting Rails, Cassandra, Docker, and more.</p>
-                        </div>
-
-                        <div class="col-12 col-md-6">
-                            <img src="../../assets/img/global.svg" alt="Global availability">
-                            <h4 class="fw-bold mt-2">Global availability</h4>
-                            <p>Deploy to any of our data center regions around the world.</p>
+                        <div class="col" v-for="(card, index) in cards" :key="index">
+                            <Card :infos="card"/>
                         </div>
                         
                     </div>
@@ -57,8 +37,40 @@
 </template>
 
 <script>
+
+import Card from '../commons/Card.vue';
+
 export default {
-    name: 'Deploy'
+    name: 'Deploy',
+    components: {
+        Card
+    },
+    data() {
+        return {
+            cards: [
+                {
+                    img: require('../../assets/img/cluster-deploy.svg'),
+                    title: 'Cluster deployments',
+                    desc: 'Provision multiple Droplets (virtual machines) in seconds with our control panel, CLI, or directly against our API.'
+                },
+                {
+                    img: require('../../assets/img/optimized-compute.svg'),
+                    title: 'Optimized compute types',
+                    desc: 'Get the compute resources you need with Standard or Optimized Droplets.'
+                },
+                {
+                    img: require('../../assets/img/one-click.svg'),
+                    title: 'One-click apps',
+                    desc: 'Skip the install and configuration process with pre-build open source images supporting Rails, Cassandra, Docker, and more.'
+                },
+                {
+                    img: require('../../assets/img/global.svg'),
+                    title: 'Global availability',
+                    desc: 'Deploy to any of our data center regions around the world.'
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -66,7 +78,7 @@ export default {
 
 @import '../../assets/style/variables.scss';
 
-p, li {
+li {
     color: $textColor;
 }
 

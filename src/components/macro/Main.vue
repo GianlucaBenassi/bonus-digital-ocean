@@ -4,6 +4,7 @@
         <Businesses/>
         <Deploy/>
         <Designe/>
+        <Features/>
     </main>
 </template>
 
@@ -12,6 +13,7 @@ import GetStartTop from '../sections/GetStartTop.vue';
 import Businesses from '../sections/Businesses.vue';
 import Deploy from '../sections/Deploy.vue';
 import Designe from '../sections/Designe.vue';
+import Features from '../sections/Features.vue';
 
 export default {
     name: 'Main',
@@ -19,7 +21,8 @@ export default {
         GetStartTop,
         Businesses,
         Deploy,
-        Designe
+        Designe,
+        Features
     }
 }
 </script>
