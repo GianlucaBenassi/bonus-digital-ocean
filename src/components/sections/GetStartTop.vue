@@ -1,16 +1,16 @@
 <template>
     <section>
         <div class="container">
-            <div class="row">
+            <div class="row py-5">
                 
                 <!-- title column -->
-                <div class="col-12 ms_description">
-                    <h1 class="mt-5 fw-bold">The simplest cloud platform for developers & teams</h1>
+                <div class="col-12 col-md-7 ms_description">
+                    <h1 class="fw-bold">The simplest cloud platform for developers & teams</h1>
                     <p>Deploy, manage, and scale cloud applications faster and more efficiently on DigitalOcean. We make managing infrastructure easy for teams and businesses, wheather you're running one virtual machine or ten thousand.</p>
                 </div>
 
                 <!-- google login form -->
-                <div class="col-12 pb-5">
+                <div class="col-12 col-md-5">
                     <form class="rounded pt-4 pb-2 px-2" @submit.prevent>
 
                         <h4 class="fw-bold text-center">Deploy your app in seconds.</h4>
