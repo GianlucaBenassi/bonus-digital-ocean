@@ -64,8 +64,10 @@ export default {
 
 <style lang='scss' scoped>
 
+@import '../../assets/style/variables.scss';
+
 p, li {
-    color: #606e8c;
+    color: $textColor;
 }
 
 </style>
