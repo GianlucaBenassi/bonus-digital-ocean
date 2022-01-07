@@ -1,12 +1,17 @@
 <template>
     <main>
-
+        <GetStartTop/>
     </main>
 </template>
 
 <script>
+import GetStartTop from '../sections/GetStartTop.vue';
+
 export default {
-    name: 'Main'
+    name: 'Main',
+    components: {
+        GetStartTop
+    }
 }
 </script>
 

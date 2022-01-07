@@ -114,6 +114,7 @@ header {
     nav {
 
         .nav_lists {
+            background-color: #fff;
             position: absolute;
             top: 50px;
             left: 0;
