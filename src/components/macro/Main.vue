@@ -7,6 +7,7 @@
         <Features/>
         <Service/>
         <Teams/>
+        <GetStartBottom/>
     </main>
 </template>
 
@@ -18,6 +19,7 @@ import Designe from '../sections/Designe.vue';
 import Features from '../sections/Features.vue';
 import Service from '../sections/Service.vue';
 import Teams from '../sections/Teams.vue';
+import GetStartBottom from '../sections/GetStartBottom.vue';
 
 export default {
     name: 'Main',
@@ -28,7 +30,8 @@ export default {
         Designe,
         Features,
         Service,
-        Teams
+        Teams,
+        GetStartBottom
     }
 }
 </script>

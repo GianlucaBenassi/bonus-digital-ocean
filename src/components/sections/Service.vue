@@ -2,7 +2,7 @@
     <section>
         <div class="container py-5">
 
-            <h2 class="text-center">Service your customers around the world from 12 regions.</h2>
+            <h2 class="text-center fw-bold">Service your customers around the world from 12 regions.</h2>
 
             <div class="row row-cols-1 row-cols-lg-2">
 
