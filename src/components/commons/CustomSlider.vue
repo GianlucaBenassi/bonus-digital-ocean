@@ -9,6 +9,9 @@
 
             <img class="w-100" :src="info.image" :alt="'slide image ' + index">
             <p class="text-center mt-3">{{info.desc}}</p>
+            <span v-if="info.author" class="d-block text-center fw-bold">{{info.author.name}}</span>
+            <span v-if="info.author" class="d-block text-center">{{info.author.role}}</span>
+            <a href="#" v-if="info.story" class="d-block text-center mt-3 pb-5">{{info.story}} &gt;</a>
 
         </Slide>
 
@@ -63,6 +66,13 @@ export default {
 
         &--active{
             background-color: $mainColor !important;
+        }
+    }
+
+    &.teams_carousel {
+        .VueCarousel-wrapper {
+            background-color: #fff;
+            border-radius: .25rem;
         }
     }
 }

@@ -6,6 +6,7 @@
         <Designe/>
         <Features/>
         <Service/>
+        <Teams/>
     </main>
 </template>
 
@@ -16,6 +17,7 @@ import Deploy from '../sections/Deploy.vue';
 import Designe from '../sections/Designe.vue';
 import Features from '../sections/Features.vue';
 import Service from '../sections/Service.vue';
+import Teams from '../sections/Teams.vue';
 
 export default {
     name: 'Main',
@@ -25,7 +27,8 @@ export default {
         Deploy,
         Designe,
         Features,
-        Service
+        Service,
+        Teams
     }
 }
 </script>
